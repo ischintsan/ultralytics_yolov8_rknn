@@ -1,3 +1,15 @@
+#### Get model optimized for RKNN
+
+This repository is created with reference to https://github.com/airockchip/ultralytics_yolov8.
+
+该存储库是参考https://github.com/airockchip/ultralytics_yolov8创建的
+
+Exports detection/segment model with optimization for RKNN, please refer here [RKOPT_README.md](RKOPT_README.md). Optimization for exporting model does not affect the training stage
+
+关于如何导出适配 RKNPU 分割/检测 模型，请参考 [RKOPT_README.zh-CN.md](RKOPT_README.zh-CN.md)，该优化只在导出模型时生效，训练代码按照原仓库的指引即可。
+
+---
+
 <div align="center">
   <p>
     <a href="https://github.com/ultralytics/assets/releases/tag/v8.2.0" target="_blank">
