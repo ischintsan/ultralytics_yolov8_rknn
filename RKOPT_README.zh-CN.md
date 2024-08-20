@@ -31,8 +31,11 @@
 # 如填入 yolov8n.pt 导出检测模型
 # 如填入 yolov8-seg.pt 导出分割模型
 
-export PYTHONPATH=./
-python ./ultralytics/engine/exporter.py
+conda create -n your_env_name python=python_version # 例如: conda create -n yolov8_export python=3.8
+cd your_path/ultralytics_yolov8_rknn
+pip install -e .
+pip install onnx
+yolo export model=your_model.pt format=rknn
 
 # 执行完毕后，会生成 ONNX 模型. 假如原始模型为 yolov8n.pt，则生成 yolov8n.onnx 模型。
 ```

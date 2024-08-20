@@ -26,8 +26,11 @@ After meeting the environment requirements specified in "./requirements.txt," ex
 # For example, filled with yolov8n.pt for detection model.
 # Filling with yolov8n-seg.pt for segmentation model.
 
-export PYTHONPATH=./
-python ./ultralytics/engine/exporter.py
+conda create -n your_env_name python=python_version # eg: conda create -n yolov8_export python=3.8
+cd your_path/ultralytics_yolov8_rknn
+pip install -e .
+pip install onnx
+yolo export model=your_model.pt format=rknn
 
 # Upon completion, the ".onnx" model will be generated. If the original model is "yolov8n.pt," the generated model will be "yolov8n.onnx"
 ```
